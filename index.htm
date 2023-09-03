@@ -125,8 +125,9 @@
             <img src="/images/profile.png" alt="Harya" class="mb-3" width="40%">
 
             <!-- info -->
+            <h5 id="pesan_sambutan"></h5>
             <h1 class="mb-2 mt-0">Danu Firda Perkasa</h1>
-            <p>Saya Adalah <span class="typing"></span></p>
+            <p>Saya adalah <span class="typing"></span></p>
 
             <!-- social icons -->
             <ul class="social-icons light list-inline mb-0 mt-4">
@@ -242,7 +243,7 @@
                     <!-- about text -->
                     <p>
                       Saya Danu Firda Perkasa, desain grafis dan web developer,
-                      dari Nganjuk, Jawa Timur. Saya memiliki pengalaman dengan desain situs web dan desain grafis. Saya sangan sering menggunakan framework laravel untuk mengerjakan project web aplikasi.
+                      dari Nganjuk, Jawa Timur. Saya memiliki pengalaman dengan desain situs web dan desain grafis. Saya sangat sering menggunakan framework laravel untuk mengerjakan project web aplikasi.
                       Jika ada pertanyaan seputar IT bisa hubungi saya.
                     </p>
                     <div class="mt-3">
@@ -686,6 +687,22 @@
         backSpeed: 40,
         loop: true,
       });
+
+      const TimeReplace =()=>{
+        let Jam = new Date().getHours();
+        let Hasil = "";
+        if (Jam>=0 && Jam<10){
+            Hasil = "Pagi";
+        }else if (Jam >=10 && Jam<15){
+            Hasil = "Siang";
+        }else if (Jam >=15 && Jam<=17){
+            Hasil = "Sore";
+        }else{
+            Hasil = "Malam";
+        }  
+          return Hasil;
+      }
+      $('#pesan_sambutan').html('Selamat '+TimeReplace()+', dan selamat datang.')
     </script>
   </body>
 </html>
